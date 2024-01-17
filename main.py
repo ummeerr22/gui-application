@@ -27,8 +27,8 @@ class Startframe(tk.Frame):
         welcome_label = tk.Label(self, text="Welcome to the Quiz Application", font=("Fixedsys", 16), bg="lightblue" )
         welcome_label.pack(pady=20)
 
-        start_button = tk.Button(self, text="          Start Quiz          ", command=self.app.display_intro_frame, bg="#65B741")
-        start_button.pack(padx=5, pady=10)
+        start_btn1 = tk.Button(self, text="          Start Quiz          ", command=self.app.display_intro_frame, bg="#65B741")
+        start_btn1.pack(padx=5, pady=10)
 
 class Introductionframe(tk.Frame):
     def __init__(self, master, app):
@@ -44,10 +44,10 @@ class Introductionframe(tk.Frame):
         info_label = tk.Label(self, text=" shfbvisrbvkshbvkshvbfk ", font=("Comic Sans MS,", 14), bg="#0F2167", fg="#4CB9E7")
         info_label.pack(pady=10)
 
-        start_quiz_button = tk.Button(self, text="          Start Quiz          ", command=self.app.load_question, bg="#65B741")
-        start_quiz_button.pack(padx=5,pady=10)
+        start_btn2 = tk.Button(self, text="          Start Quiz          ", command=self.app.load_question, bg="#65B741")
+        start_btn2.pack(padx=5,pady=10)
 
-class QuizGUI(tk.Frame):
+class QuizApp(tk.Frame):
     def __init__(self, master, amount, category):
         tk.Frame.__init__(self, master, bg="lightblue")
         self.master = master
@@ -128,5 +128,5 @@ if __name__ == "__main__":
     root.config(bg="lightblue")
     root.title("Quiz Application")
     root.geometry("700x500+100+100")
-    app = QuizGUI(root, amount, category)
+    app = QuizApp(root, amount, category)
     root.mainloop()
