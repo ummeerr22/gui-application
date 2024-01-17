@@ -126,7 +126,7 @@ if __name__ == "__main__":
     category = 11
     root = tk.Tk()
     root.config(bg="lightblue")
-    root.title("Quiz Application")
+    root.title("Quiz Trivia")
     root.geometry("700x500+100+100")
     app = QuizApp(root, amount, category)
     root.mainloop()
