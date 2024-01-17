@@ -27,7 +27,7 @@ class Startframe(tk.Frame):
         welcome_label = tk.Label(self, text="Welcome to the Quiz Application", font=("Fixedsys", 16), bg="lightblue" )
         welcome_label.pack(pady=20)
 
-        start_btn1 = tk.Button(self, text="          Start Quiz          ", command=self.app.display_intro_frame, bg="#65B741")
+        start_btn1 = tk.Button(self, text="          Start         ", command=self.app.display_intro_frame, bg="#65B741")
         start_btn1.pack(padx=5, pady=10)
 
 class Introductionframe(tk.Frame):
@@ -41,7 +41,12 @@ class Introductionframe(tk.Frame):
         head2_label = tk.Label(self, text=" Introduction ", font=("Fixedsys", 18), bg="lightblue")
         head2_label.pack(pady=10)
 
-        info_label = tk.Label(self, text=" shfbvisrbvkshbvkshvbfk ", font=("Comic Sans MS,", 14), bg="#0F2167", fg="#4CB9E7")
+        info_label = tk.Label(self, text='''The Open Trivia Database API has been used by the user-friendly 
+        Tkinter-based Python quiz application. It offers a fun experience 
+        by testing users' knowledge, presenting a sequence of randomly 
+        generated questions, and giving immediate response.It attempts 
+        to make studying and quizzing fun for users using an easy-to-use 
+        interface.''', font=("Comic Sans MS,", 14), bg="#0F2167", fg="#4CB9E7")
         info_label.pack(pady=10)
 
         start_btn2 = tk.Button(self, text="          Start Quiz          ", command=self.app.load_question, bg="#65B741")
